@@ -78,16 +78,15 @@ rm -rf $RPM_BUILD_ROOT
 %{python_sitelib}/ansible*
 %{_bindir}/ansible*
 %dir %{_datadir}/ansible
-%{_datadir}/ansible/[a-eg-z]*
-%{_datadir}/ansible/f[a-hj-z]*
-%{_datadir}/ansible/file
+%{_datadir}/ansible/*
 %config(noreplace) %{_sysconfdir}/ansible
 %doc README.md PKG-INFO COPYING
 %doc %{_mandir}/man1/ansible*
-%doc %{_mandir}/man3/ansible.[a-eg-z]*
-%doc %{_mandir}/man3/ansible.f[a-hj-z]*
-%doc %{_mandir}/man3/ansible.file*
+%doc %{_mandir}/man3/ansible.*
 %doc examples/playbooks
+# Get the fireball stuff out of here, that's handled in its own sub-package
+%exclude %{_datadir}/ansible/fireball
+%exclude %{_mandir}/man3/ansible.fireball*
 
 %files fireball
 %{_datadir}/ansible/fireball
