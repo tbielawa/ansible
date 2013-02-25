@@ -8,6 +8,8 @@ Release: 1%{?dist}
 Summary: SSH-based configuration management, deployment, and task execution system
 Version: 1.0
 
+Group: Applications/Internet
+Group: Applications/System
 Group: Development/Libraries
 License: GPLv3
 Source0: https://github.com/downloads/ansible/ansible/%{name}-%{version}.tar.gz
